@@ -96,11 +96,13 @@ namespace UniCoreEAC
 
         private void ShowNotification()
         {
-            new Thread(() => this.notifyIcon.ShowBalloonTip(
-                2000,
-                "",
-                "Affinity of EasyAntiCheat set to one core.",
-                ToolTipIcon.Info)).Start();
+            if (Settings.GetValueBool(Settings.SETTING_SHOWNOTIFICATIONS, true)) { 
+                new Thread(() => this.notifyIcon.ShowBalloonTip(
+                    2000,
+                    "",
+                    "Affinity of EasyAntiCheat set to one core.",
+                    ToolTipIcon.Info)).Start();
+            }
         }
     }
 }
