@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>ucEAC.ico</ApplicationIcon>
+    <PackageProjectUrl>https://github.com/f4ithfulR/UniCoreEAC</PackageProjectUrl>
+    <PackageLicenseFile>C:\Users\sebastian\source\repos\UniCoreEAC\LICENSE.txt</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/f4ithfulR/UniCoreEAC</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>ucEAC-192x192.png</PackageIcon>
+    <Copyright>GPL v3</Copyright>
+    <Description>
+
+GitHub (https://github.com/f4ithfulR/UniCoreEAC)
+
+
+License:
+GPL v3 (https://www.gnu.org/licenses/gpl-3.0.html)</Description>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <Authors>[RSC] f4ithfulR</Authors>
+    <Company> </Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="ucEAC.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="TaskScheduler" Version="2.10.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="rsc_img.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="ucEAC-192x192.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
